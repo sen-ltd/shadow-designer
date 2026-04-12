@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-main">
+        <h1 id="title">Shadow Designer</h1>
+        <p id="subtitle"></p>
+      </div>
+      <div class="header-actions">
+        <button id="theme-btn" type="button" class="theme-btn"></button>
+        <div class="lang-switch">
+          <label id="lang-label" for="lang-select"></label>
+          <select id="lang-select"></select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Preview -->
+      <section class="section">
+        <h2 id="preview-label" class="section-title"></h2>
+        <div id="preview-canvas" class="preview-canvas">
+          <div id="preview-box" class="preview-box"></div>
+        </div>
+
+        <!-- Box customisation -->
+        <div class="box-controls">
+          <div class="field">
+            <label class="field-label" id="box-width-label" for="box-width"></label>
+            <input id="box-width" type="number" min="40" max="400" step="4" value="200" class="num-input" />
+          </div>
+          <div class="field">
+            <label class="field-label" id="box-height-label" for="box-height"></label>
+            <input id="box-height" type="number" min="20" max="300" step="4" value="120" class="num-input" />
+          </div>
+          <div class="field">
+            <label class="field-label" id="box-bg-label" for="box-bg"></label>
+            <input id="box-bg" type="color" value="#ffffff" class="color-input" />
+          </div>
+          <div class="field">
+            <label class="field-label" id="box-radius-label" for="box-radius"></label>
+            <input id="box-radius" type="number" min="0" max="100" step="1" value="12" class="num-input" />
+          </div>
+          <div class="field">
+            <label class="field-label" id="canvas-bg-label" for="canvas-bg"></label>
+            <input id="canvas-bg" type="color" value="#e8ecf0" class="color-input" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Layers -->
+      <section class="section panel">
+        <div class="section-header">
+          <h2 id="layers-label" class="section-title"></h2>
+          <button id="add-layer-btn" type="button" class="add-btn"></button>
+        </div>
+        <div id="layers" class="layers"></div>
+      </section>
+
+      <!-- CSS Output -->
+      <section class="section output-section">
+        <div class="output-header">
+          <span id="output-label" class="output-label-text"></span>
+          <button id="copy-btn" type="button" class="copy-btn"></button>
+        </div>
+        <pre id="output" class="output"></pre>
+      </section>
+
+      <!-- Presets -->
+      <section class="section">
+        <h2 id="presets-label" class="section-title"></h2>
+        <div id="presets" class="presets"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footer"></span>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
